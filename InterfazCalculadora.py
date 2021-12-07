@@ -3,7 +3,7 @@ from tkinter import *
 root = Tk()
 root.title("Calculadora")
 root.resizable(0,0)
-root.geometry("459x361+750+300")
+root.geometry("459x448+750+300")
 root.config(background='#7A89C9')
 var1 = Entry(root)
 var1.grid(row=1, columnspan=6, sticky=W+E)
@@ -29,5 +29,7 @@ Button(root, text="+", width=15, height=5).grid(row=2, column=3, sticky=W+E)
 Button(root, text="-", width=15, height=5).grid(row=3, column=3, sticky=W+E)
 Button(root, text="/", width=15, height=5).grid(row=4, column=3, sticky=W+E)
 Button(root, text="*", width=15, height=5).grid(row=5, column=3, sticky=W+E)
+
+Button(root, text="=", width=15, height=5).grid(row=6, columnspan=6, sticky=W+E)
 
 root.mainloop()
