@@ -1,4 +1,4 @@
-import Funciones
+from claseFunciones import Funciones
 from tkinter import *
 
 root = Tk()
