@@ -36,3 +36,26 @@ class Funciones:
     #Símbolo del igual
     def calcular():
         pass
+
+    #Suma
+    def SumaP(numero1, numero2):
+        sumaP = numero1 + numero2
+        return sumaP
+
+    #Resta
+    def RestaP(numero1, numero2):
+        restaP = numero1 - numero2
+        return restaP
+
+    #Division
+    def DivisionP(numero1, numero2):
+        try:
+            divisionP = numero1 / numero2
+            print("La division es ",divisionP)
+        except ZeroDivisionError:
+            print("Error! ZeroDivisionError")
+
+    #Multiplicación
+    def MultiplicacionP(numero1, numero2):
+        multiP = numero1 * numero2
+        print("La multiplicacion es ",multiP)

@@ -1,3 +1,4 @@
+import Funciones
 from tkinter import *
 
 root = Tk()
@@ -9,10 +10,7 @@ var1 = Entry(root)
 var1.grid(row=1, columnspan=6, sticky=W+E)
 var1.config(font=("Calibri 16"))
 
-def __init__(self):
-        pass
-
-#Función para obtener el número del botón
+""" #Función para obtener el número del botón
 i = 0
 def obtenerNumeros(n):
     global i
@@ -38,7 +36,7 @@ def undo():
         var1.insert(0, var1_new_state)
     else:
         limpiar()
-        var1.insert(0, 'Error')
+        var1.insert(0, 'Error') """
 
 #Símbolo del igual
 def calcular():
