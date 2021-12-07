@@ -1,21 +1,34 @@
-#from InterfazCalculadora import *
 from tkinter import *
 class Funciones:
+
+    numero = ""
+    i = 0
 
     def __init__(self, var1):
         self.var1 = var1
         print(self.var1)
 
     #Función para obtener el número del botón
-    i = 0
     def obtenerNumeros(self, n):
         global i
         self.var1.insert(self.i, n)
+        self.numero+=n
         self.i+=1
 
     #Función para obtener el operador
     def obtenerOperadores(self, operador):
         global i
+        if operador == "+":
+            self.limpiar()
+            self.var1.insert(0, self.sumaP(self.numero))
+            self.numero=""
+        elif operador == "-":
+            self.limpiar()
+            #print(type(self.numero))
+            self.var1.insert(0, self.restaP(self.numero))
+            self.numero=""
+            print("hola")
+
         self.var1.insert(self.i, operador)
         self.i+=1
 
@@ -39,17 +52,19 @@ class Funciones:
         pass
 
     #Suma
-    def SumaP(self, numero1, numero2):
-        sumaP = numero1 + numero2
-        return sumaP
+    suma = 0
+    def sumaP(self, numero1):
+        self.suma += int(numero1)
+        return self.suma
 
     #Resta
-    def RestaP(self, numero1, numero2):
-        restaP = numero1 - numero2
-        return restaP
+    resta = 0
+    def restaP(self, numero1):
+        self.resta -= int(numero1)
+        return self.resta
 
     #Division
-    def DivisionP(self, numero1, numero2):
+    def divisionP(self, numero1, numero2):
         try:
             divisionP = numero1 / numero2
             print("La division es ",divisionP)
@@ -57,6 +72,6 @@ class Funciones:
             print("Error! ZeroDivisionError")
 
     #Multiplicación
-    def MultiplicacionP(self, numero1, numero2):
+    def multiplicacionP(self, numero1, numero2):
         multiP = numero1 * numero2
         print("La multiplicacion es ",multiP)
