@@ -59,6 +59,7 @@ class Funciones:
                             self.limpiar()
                             self.var1.insert(0, result)
 
+            print(self.operaciones)
     
     def mostrar(self, n):
         self.var1.insert(self.i, n)
@@ -111,32 +112,3 @@ class Funciones:
         else:
             self.limpiar()
             self.var1.insert(0, 'Error')
-
-    #Símbolo del igual
-    def calcular(self):
-        pass
-
-    #Suma
-    suma = 0
-    def sumaP(self, numero1):
-        self.suma += int(numero1)
-        return self.suma
-
-    #Resta
-    resta = 0
-    def restaP(self, numero1):
-        self.resta = int(numero1) - self.resta
-        return self.resta
-
-    #Division
-    def divisionP(self, numero1, numero2):
-        try:
-            divisionP = numero1 / numero2
-            print("La division es ",divisionP)
-        except ZeroDivisionError:
-            print("Error! ZeroDivisionError")
-
-    #Multiplicación
-    def multiplicacionP(self, numero1, numero2):
-        multiP = numero1 * numero2
-        print("La multiplicacion es ",multiP)
