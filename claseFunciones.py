@@ -13,7 +13,7 @@ class Funciones:
         result = 0
 
         if sn:
-            #print(self.operaciones)
+            print(self.operaciones)
 
             if(len(self.operaciones) > 2):
                 if self.operaciones.__contains__("="):
