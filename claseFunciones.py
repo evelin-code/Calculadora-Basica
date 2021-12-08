@@ -58,7 +58,7 @@ class Funciones:
                             del self.operaciones[index]
                             self.limpiar()
                             self.var1.insert(0, result)
-
+            
             print(self.operaciones)
     
     def mostrar(self, n):
@@ -69,7 +69,8 @@ class Funciones:
             self.numero += n
             return False
         else:
-            self.operaciones.append(self.numero)
+            if self.numero != "":
+                self.operaciones.append(self.numero)
             self.operaciones.append(n)
             self.numero = ""
             return True
