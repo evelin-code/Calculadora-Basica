@@ -107,3 +107,4 @@ class Funciones:
                         num1 = self.obtenerNumeros("-", 1)
                         num2 = self.obtenerNumeros("-", 2)
                         self.calcula(num1, num2, "-")
+                        
