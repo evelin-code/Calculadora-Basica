@@ -26,8 +26,12 @@ class Funciones:
 
 
     #Limpiar la pantalla
-    def limpiar(self):
-        self.var1.delete(0, END)
+    def limpiar(self, opcion):
+        if opcion == 1:
+            self.var1.delete(0, END)
+        else:
+            self.var1.delete(0, END)
+            self.operaciones = []
 
 
     #Limpiar de uno en uno los elementos
@@ -35,12 +39,14 @@ class Funciones:
         self.var1_state = self.var1.get()
         if len(self.var1_state):
             var1_new_state = self.var1_state[:-1]
-            self.limpiar()
-            self.var1.insert(0, var1_new_state)
+            self.limpiar(1)
+            self.mostrar(0, var1_new_state)
+            if len(self.operaciones) != 0:
+                self.operaciones.pop()
         else:
-            self.limpiar()
-            self.var1.insert(0, 'Error')
-
+            self.limpiar(2)
+            self.mostrar(0, "No hay nada pa' borrar")
+        
 
     def mostrar(self, caracter, valor):
         self.var1.insert(caracter, valor)
@@ -62,7 +68,7 @@ class Funciones:
         self.operaciones[index] = result
         del self.operaciones[index-1]
         del self.operaciones[index]
-        self.limpiar()
+        self.limpiar(1)
         self.mostrar(0, result)
 
     
@@ -74,7 +80,7 @@ class Funciones:
 
 
     def operacion(self, n):
-        sn = self.validaOperaciones(n)
+        sn = self.validaOperaciones(n)        
         
         if sn:
             if self.operaciones.__contains__("="):
@@ -90,7 +96,7 @@ class Funciones:
                             num2 = self.obtenerNumeros("/", 2)
                             self.calcula(num1, num2, "/")
                         except:
-                            self.limpiar()
+                            self.limpiar(1)
                             self.mostrar(0, "No me exija dividir por 0")
                             break
                     elif self.operaciones.__contains__("+"): 
