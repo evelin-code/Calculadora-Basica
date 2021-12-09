@@ -4,7 +4,7 @@ from tkinter import *
 root = Tk()
 root.title("Calculadora")
 root.resizable(0,0)
-root.geometry("459x495+700+100")
+root.geometry("459x495+700+250")
 root.config(background='#7A89C9')
 var1 = Entry(root)
 var1.grid(row=0,column=0,padx=0,pady=0,ipady=15)
