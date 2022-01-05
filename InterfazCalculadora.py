@@ -41,4 +41,6 @@ Button(root, text="=", width=15, height=5, command=lambda:funciones.operacion("=
 root.mainloop()
 
 
-#comentario de prueba para volver a esta versión
+#XXXXXXXXXXXXXXXXXXXXXcomentario de prueba para volver a esta versiónXXXXXXXXXXXXXXXXXXXXXXX
+
+#COMENTARIO DE PRUBA DE ULTIMA VERSION
