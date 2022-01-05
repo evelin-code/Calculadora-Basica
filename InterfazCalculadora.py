@@ -39,3 +39,6 @@ Button(root, text="*", width=15, height=5, command=lambda:funciones.operacion("*
 Button(root, text="=", width=15, height=5, command=lambda:funciones.operacion("=")).grid(row=6, columnspan=6, sticky=W+E)
 
 root.mainloop()
+
+
+#comentario de prueba para volver a esta versión
